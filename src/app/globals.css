@@ -3,31 +3,71 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --Dark: #0e1010;
+  --Dark-Elevated: #1d1d1d;
+  --Border: #2b2d2d;
+  --Text: #aeb2ba;
+  --Accent: #2cffbf;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--Dark);
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.03em;
+  line-height: 1.2em;
+}
+
+p {
+  color: var(--Text);
+  letter-spacing: -0.01em;
+  line-height: 1.6em;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.blog-post-item {
+  transition: transform 0.3s ease-out;
+  transform: translateX(0);
+}
+
+.blog-post-item:hover {
+  transform: translateX(8px);
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-33.33%);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-33.33%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-up {
+  animation: scrollUp 30s linear infinite;
+}
+
+.animate-scroll-down {
+  animation: scrollDown 30s linear infinite;
 }
