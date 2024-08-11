@@ -3,9 +3,10 @@ import Hero from "../../components/HeroSection";
 import RecentProjects from "../../components/RecentProjects";
 import About from "../../components/About";
 import Skills from "../../components/Skills";
-import Blog from "../../components/Blog";
+import LatestBlogPosts from "../../components/Blog"; // Asegúrate de importar el componente
 import Footer from "../../components/Footer";
 import CTA from "../../components/Cta";
+
 export default function Home() {
   return (
     <div className="max-w-6xl mx-auto min-h-screen">
@@ -15,7 +16,7 @@ export default function Home() {
       <RecentProjects />
       <About />
       <Skills />
-      <Blog />
+      <LatestBlogPosts /> {/* Renderiza el componente aquí */}
       <CTA
         images1={["/proyect2.jpg", "/proyecthero2.jpg"]}
         images2={[

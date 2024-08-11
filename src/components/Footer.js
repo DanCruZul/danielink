@@ -94,18 +94,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-9 border-b border-[var(--Border)] grid grid-cols-3 items-center">
+        <div className="py-9 border-b border-[var(--Border)] grid grid-cols-2 items-center">
           <div className="text-3xl -tracking-wider italic">
             <Link href="/home#hero">Danielink</Link>
           </div>
-          <div className="flex justify-center gap-10 text-[var(--Text)] text-p16">
+          {/* <div className="flex justify-center gap-10 text-[var(--Text)] text-p16">
             <a href="#" className="hover:text-white duration-300">
               Privacy Policy
             </a>
             <a href="#" className="hover:text-white duration-300">
               Terms & Conditions
             </a>
-          </div>
+          </div> */}
           <div className="flex justify-end gap-2">
             <a
               href="https://www.youtube.com/@danielink."

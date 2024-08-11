@@ -1,12 +1,17 @@
 import Navbar from "@/components/Navbar";
 import CTA from "@/components/Cta";
 import Footer from "@/components/Footer";
+import { getAllPostSlugs, getPostData } from "@/lib/posts";
+import PostList from "@/components/ui/PostList"; // Importa el nuevo componente
 
-export default function Blog() {
+export default async function Blog() {
+  const slugs = getAllPostSlugs();
+  const posts = await Promise.all(slugs.map((slug) => getPostData(slug)));
+
   return (
     <div className="max-w-6xl mx-auto min-h-screen">
       <Navbar />
-      <section className="flex flex-col py-24 gap-11">
+      <section className="flex flex-col py-24 gap-14">
         <div className="flex justify-between items-center">
           <h2 className="text-h2 font-medium flex items-center">
             Latest from my blog
@@ -26,6 +31,7 @@ export default function Blog() {
             </div>
           </div>
         </div>
+        <PostList posts={posts} />
       </section>
       <CTA
         images1={["/proyect2.jpg", "/proyecthero2.jpg"]}

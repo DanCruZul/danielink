@@ -1,28 +1,34 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import SecondaryButton from "./ui/SecondaryButton";
 import { Newspaper } from "lucide-react";
+import PostList from "./ui/PostList"; // Importa el nuevo componente
 
 const LatestBlogPosts = () => {
-  const blogPosts = [
-    {
-      category: "WEB DESIGN",
-      title: "Starting and Growing a Career in Web Design",
-      date: "Apr 8, 2022",
-      author: "Daniel Cruz",
-    },
-    {
-      category: "WEB DEVELOPMENT",
-      title: "Create a Landing Page That Performs Great",
-      date: "Mar 15, 2022",
-      author: "Daniel Cruz",
-    },
-    {
-      category: "WEB DESIGN",
-      title: "How Can Designers Prepare for the Future?",
-      date: "Feb 28, 2022",
-      author: "Daniel Cruz",
-    },
-  ];
+  const [latestPosts, setLatestPosts] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    async function fetchPosts() {
+      try {
+        const response = await fetch("/api/posts");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const posts = await response.json();
+        setLatestPosts(posts.slice(0, 3));
+      } catch (e) {
+        console.error("Error fetching posts:", e);
+        setError("Failed to load posts. Please try again later.");
+      }
+    }
+    fetchPosts();
+  }, []);
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
 
   return (
     <div className="flex flex-col py-24 gap-11">
@@ -30,22 +36,7 @@ const LatestBlogPosts = () => {
         <span className="size-3 bg-[var(--Accent)] rounded-full mr-5"></span>
         Latest from my blog
       </h2>
-
-      <div className="flex flex-col gap-10">
-        {blogPosts.map((post, index) => (
-          <div
-            key={index}
-            className="border-b border-[var(--Border)] flex flex-col gap-3 pb-6 hover:cursor-pointer blog-post-item"
-          >
-            <span className="text-xs font-normal">{post.category}</span>
-            <h3 className="text-h3 font-medium">{post.title}</h3>
-            <span className="text-xs text-[var(--Text)]">
-              {post.date} • by {post.author}
-            </span>
-          </div>
-        ))}
-      </div>
-
+      <PostList posts={latestPosts} /> {/* Usa el nuevo componente aquí */}
       <SecondaryButton text="View All Articles" to="/blog" icon={Newspaper} />
     </div>
   );

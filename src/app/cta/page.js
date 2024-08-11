@@ -1,12 +1,13 @@
 import Navbar from "../../components/Navbar";
+import GetStarted from "../../components/GetStarted";
 import CTA from "../../components/Cta";
 import Footer from "../../components/Footer";
 
-export default function GetStarted() {
+export default function Cta() {
   return (
     <div className="max-w-6xl mx-auto min-h-screen">
       <Navbar />
-      <div className="flex flex-col gap-24"></div>
+      <GetStarted />
       <CTA
         images1={["/proyect2.jpg", "/proyecthero2.jpg"]}
         images2={[
