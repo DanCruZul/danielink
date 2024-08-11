@@ -81,7 +81,7 @@ export default function Navbar() {
       <div className="flex justify-end">
         <Link href="/cta">
           <button className="bg-[var(--Dark-Elevated)] text-base -tracking-wide pr-2 pl-5 py-2 rounded-full flex items-center gap-3 hover:bg-white hover:text-[var(--Dark)] hover:gap-4 duration-300">
-            LET'S TALK
+            LET&apos;S TALK
             <ArrowUpRight className="size-8 bg-[var(--Accent)] text-black px-2 py-1 rounded-full duration-300" />
           </button>
         </Link>

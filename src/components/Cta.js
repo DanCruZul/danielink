@@ -1,10 +1,13 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import Button from "./ui/PrimaryButton";
 import Image from "next/image";
 
 const PortfolioCTA = ({ images1 = [], images2 = [], images3 = [] }) => {
-  const columnRefs = [useRef(null), useRef(null), useRef(null)];
+  const columnRefs = useMemo(
+    () => [useRef(null), useRef(null), useRef(null)],
+    []
+  );
 
   useEffect(() => {
     columnRefs.forEach((ref, index) => {
