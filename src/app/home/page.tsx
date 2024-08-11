@@ -3,7 +3,7 @@ import Hero from "../../components/HeroSection";
 import RecentProjects from "../../components/RecentProjects";
 import About from "../../components/About";
 import Skills from "../../components/Skills";
-import LatestBlogPosts from "../../components/Blog"; // Asegúrate de importar el componente
+import LatestBlogPosts from "../../components/Blog";
 import Footer from "../../components/Footer";
 import CTA from "../../components/Cta";
 import Image from "next/image";

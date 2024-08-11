@@ -45,13 +45,17 @@ const ProjectItem = ({
               <span className="text-base -tracking-wide">{company}</span>
             </div>
             <div className="flex justify-between pb-5 border-b border-[var(--Border)]">
+              <span className="text-[var(--Text)] text-base -tracking-wide">
+                Visit Site
+              </span>
               <a
                 href={siteUrl}
-                className="text-[var(--Text)] text-base -tracking-wide"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[var(--Text)] transition-all duration-300"
               >
-                Visit Site
+                <ArrowRight className="size-5" />
               </a>
-              <ArrowRight className="size-5 text-white hover:text-[var(--Text)] transition-all duration-300" />
             </div>
           </div>
         </div>
