@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
 const Skills = () => {
@@ -48,3 +49,4 @@ const Skills = () => {
 };
 
 export default Skills;
+/* eslint-enable react/no-unescaped-entities */

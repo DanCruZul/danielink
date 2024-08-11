@@ -33,7 +33,7 @@ const RecentProjects = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [projectsRef]);
 
   const projects = [
     {
@@ -45,7 +45,7 @@ const RecentProjects = () => {
       deliverables: "Web Design, Branding",
       company: "Wize Templates",
       siteUrl: "https://evoketemplate.framer.website/",
-      images: ["proyect1.webp", "proyectservices1.webp", "proyectteam2.jpg"],
+      images: ["/proyect1.webp", "/proyectservices1.webp", "/proyectteam2.jpg"],
     },
     {
       year: "2024",
@@ -57,7 +57,7 @@ const RecentProjects = () => {
       company: "Brandboost",
       siteUrl:
         "https://www.behance.net/gallery/197444853/Brandboost-Marketing-agency-Landing-page",
-      images: ["proyecthero2.jpg", "proyect2.jpg"],
+      images: ["/proyecthero2.jpg", "/proyect2.jpg"],
     },
     // Agrega más proyectos aquí
   ];

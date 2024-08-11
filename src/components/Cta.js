@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import Button from "./ui/PrimaryButton";
+import Image from "next/image";
 
 const PortfolioCTA = ({ images1 = [], images2 = [], images3 = [] }) => {
   const columnRefs = [useRef(null), useRef(null), useRef(null)];
@@ -12,7 +13,7 @@ const PortfolioCTA = ({ images1 = [], images2 = [], images3 = [] }) => {
         ref.current.style.setProperty("--scroll-direction", direction);
       }
     });
-  }, []);
+  }, [columnRefs]);
 
   const renderColumn = (images, index) => {
     return (
@@ -23,11 +24,13 @@ const PortfolioCTA = ({ images1 = [], images2 = [], images3 = [] }) => {
           }`}
         >
           {[...images, ...images, ...images].map((img, imgIndex) => (
-            <img
+            <Image
               key={imgIndex}
               src={img}
               alt={`Project ${(imgIndex % images.length) + 1}`}
               className="w-full h-64 object-cover rounded-lg"
+              width={500}
+              height={256}
             />
           ))}
         </div>
@@ -40,9 +43,12 @@ const PortfolioCTA = ({ images1 = [], images2 = [], images3 = [] }) => {
       {/* Background images */}
       <div className="absolute inset-0 z-0">
         <div className="grid grid-cols-3 gap-4 h-full opacity-20">
-          {renderColumn(images1, 0)}
-          {renderColumn(images2, 1)}
-          {renderColumn(images3, 2)}
+          {renderColumn(["/proyect2.jpg", "/proyecthero2.jpg"], 0)}
+          {renderColumn(
+            ["/proyect1.webp", "/proyectservices1.webp", "/proyectteam2.jpg"],
+            1
+          )}
+          {renderColumn(["/proyect2.jpg", "/proyecthero2.jpg"], 2)}
         </div>
       </div>
 
@@ -54,9 +60,9 @@ const PortfolioCTA = ({ images1 = [], images2 = [], images3 = [] }) => {
       <div className="relative z-10 flex flex-col gap-3 max-w-2xl">
         <h2 className="text-h2 font-medium">Have a Project in Mind?</h2>
         <p className="text-p16 mb-7">
-          I'd love to hear from you! Whether you're ready to kickstart a new
-          website or revamp an existing one, I'm here to help turn your ideas
-          into reality.
+          I&apos;d love to hear from you! Whether you&apos;re ready to kickstart
+          a new website or revamp an existing one, I&apos;m here to help turn
+          your ideas into reality.
         </p>
         <div>
           <Button text="GET STARTED" />

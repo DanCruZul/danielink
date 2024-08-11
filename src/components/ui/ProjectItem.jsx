@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const ProjectItem = ({
   year,
@@ -63,10 +64,12 @@ const ProjectItem = ({
         <div className="flex flex-col gap-9">
           {images.map((image, index) => (
             <div key={index} className="rounded-2xl overflow-hidden">
-              <img
+              <Image
                 src={image}
                 alt={`Project ${index + 1}`}
                 className="w-full h-[25rem] object-cover transition duration-300 hover:brightness-90"
+                width={400}
+                height={400}
               />
             </div>
           ))}

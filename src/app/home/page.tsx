@@ -6,6 +6,7 @@ import Skills from "../../components/Skills";
 import LatestBlogPosts from "../../components/Blog"; // Asegúrate de importar el componente
 import Footer from "../../components/Footer";
 import CTA from "../../components/Cta";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -27,6 +28,15 @@ export default function Home() {
         images3={["/proyect2.jpg", "/proyecthero2.jpg"]}
       />
       <Footer />
+      <div className="size-12 bg-gray-600 rounded-full flex items-center justify-center">
+        <Image
+          className="rounded-full"
+          src="/profile.png"
+          alt=""
+          width={48}
+          height={48}
+        />
+      </div>
     </div>
   );
 }

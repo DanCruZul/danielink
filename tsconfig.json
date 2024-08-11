@@ -28,7 +28,8 @@
     ".next/types/**/*.ts",
     "src/app/blog/page.js",
     "src/components/About.js",
-    "src/app/posts/[slug]/page.js"
+    "src/app/posts/[slug]/page.js",
+    "src/components/ui/ProjectItem.jsx"
   ],
   "exclude": ["node_modules"]
 }

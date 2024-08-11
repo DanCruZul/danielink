@@ -24,10 +24,10 @@ const LatestBlogPosts = () => {
       }
     }
     fetchPosts();
-  }, []);
+  }, [setLatestPosts, setError]);
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div>Error: {error.replace(/'/g, "&apos;")}</div>;
   }
 
   return (

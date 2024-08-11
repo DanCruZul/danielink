@@ -2,13 +2,20 @@
 
 import Button from "./ui/PrimaryButton";
 import SecondaryButton from "./ui/SecondaryButton";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section id="hero" className="flex flex-col pt-24 gap-9">
       <div className="flex items-center gap-3">
         <div className="size-12 bg-gray-600 rounded-full flex items-center justify-center">
-          <img className="rounded-full" src="/profile.png" alt="" />
+          <Image
+            className="rounded-full"
+            src="/profile.png"
+            alt="Daniel Cruz Photo"
+            width={48}
+            height={48}
+          />
         </div>
         <div>
           <h2 className="text-base -tracking-wide font-bold">Daniel Cruz</h2>

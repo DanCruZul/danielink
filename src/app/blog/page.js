@@ -3,6 +3,7 @@ import CTA from "@/components/Cta";
 import Footer from "@/components/Footer";
 import { getAllPostSlugs, getPostData } from "@/lib/posts";
 import PostList from "@/components/ui/PostList"; // Importa el nuevo componente
+import Image from "next/image";
 
 export default async function Blog() {
   const slugs = getAllPostSlugs();
@@ -18,7 +19,13 @@ export default async function Blog() {
           </h2>
           <div className="flex items-center gap-3">
             <div className="size-12 bg-gray-600 rounded-full flex items-center justify-center">
-              <img className="rounded-full" src="/profile.png" alt="" />
+              <Image
+                className="rounded-full"
+                src="/profile.png"
+                alt="Daniel Cruz Photo"
+                width={48}
+                height={48}
+              />
             </div>
             <div>
               <h2 className="text-base -tracking-wide font-bold">

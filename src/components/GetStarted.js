@@ -11,14 +11,14 @@ export default function GetStarted() {
     if (typeof window !== "undefined" && window.Calendly) {
       setIsCalendlyReady(true);
     }
-  }, []);
+  }, [setIsCalendlyReady]);
 
   return (
     <div className="flex flex-col justify-center text-center py-16 gap-10">
       <div className="flex flex-col gap-3">
         <h2 className="text-h1 font-medium">Get Started</h2>
         <p className="text-p20">
-          Find a suitable time slot in my calendar, and let's discuss your
+          Find a suitable time slot in my calendar, and let&apos;s discuss your
           project.
         </p>
         <div className="flex justify-center gap-2">
