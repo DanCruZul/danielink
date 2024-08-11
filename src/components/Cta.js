@@ -4,10 +4,11 @@ import Button from "./ui/PrimaryButton";
 import Image from "next/image";
 
 const PortfolioCTA = ({ images1 = [], images2 = [], images3 = [] }) => {
-  const columnRefs = useMemo(
-    () => [useRef(null), useRef(null), useRef(null)],
-    []
-  );
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+
+  const columnRefs = useMemo(() => [ref1, ref2, ref3], []);
 
   useEffect(() => {
     columnRefs.forEach((ref, index) => {
