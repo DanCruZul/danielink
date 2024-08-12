@@ -67,7 +67,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/home#proyects" className="hover:text-white">
+            <Link href="/home#projects" className="hover:text-white">
               Work
             </Link>
           </li>

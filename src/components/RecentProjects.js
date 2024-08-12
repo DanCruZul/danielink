@@ -40,7 +40,7 @@ const RecentProjects = () => {
       year: "2024",
       title: "Evoke - Premium Agency/SaaS Website Template",
       description:
-        "Evoke is a Framer Template made for digital marketing agencies and SaaS businesses. It features multiple pages, and tons of unique sections to help build your new website. It's built to help you showcase your business's services or products, your past work, and gives your users an easy way to get in touch with you through the Calendly embed.",
+        "Evoke is a Template made for digital marketing agencies and SaaS businesses. It features multiple pages, and tons of unique sections to help build your new website. It's built to help you showcase your business's services or products, your past work, and gives your users an easy way to get in touch with you through the Calendly embed.",
       role: "Web Designer, SEO",
       deliverables: "Web Design, Branding",
       company: "Wize Templates",
@@ -51,7 +51,7 @@ const RecentProjects = () => {
       year: "2024",
       title: "Evoke - Premium Agency/SaaS Website Template",
       description:
-        "Evoke is a Framer Template made for digital marketing agencies and SaaS businesses. It features multiple pages, and tons of unique sections to help build your new website. It's built to help you showcase your business's services or products, your past work, and gives your users an easy way to get in touch with you through the Calendly embed.",
+        "Evoke is a Template made for digital marketing agencies and SaaS businesses. It features multiple pages, and tons of unique sections to help build your new website. It's built to help you showcase your business's services or products, your past work, and gives your users an easy way to get in touch with you through the Calendly embed.",
       role: "Web Designer, SEO",
       deliverables: "Web Design, Branding",
       company: "Brandboost",
@@ -63,7 +63,7 @@ const RecentProjects = () => {
   ];
 
   return (
-    <div id="proyects" className="flex flex-col gap-16 py-24">
+    <div id="projects" className="flex flex-col gap-16 py-24">
       <h2 className="text-h2 font-medium flex items-center">
         <span className="size-3 bg-[var(--Accent)] rounded-full mr-5"></span>
         Recent projects

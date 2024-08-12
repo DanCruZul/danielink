@@ -66,7 +66,7 @@ export default function Footer() {
               <h3>Useful links</h3>
               <ul className="flex flex-col gap-2 text-[var(--Text)]">
                 <li>
-                  <Link href="/home#proyects" className="hover:text-white">
+                  <Link href="/home#projects" className="hover:text-white">
                     Work
                   </Link>
                 </li>

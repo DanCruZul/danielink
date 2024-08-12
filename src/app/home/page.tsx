@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="max-w-6xl mx-auto min-h-screen">
+    <main className="max-w-6xl mx-auto min-h-screen">
       <div className="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_50%_8%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       <Navbar />
       <Hero />
@@ -28,15 +28,6 @@ export default function Home() {
         images3={["/proyect2.jpg", "/proyecthero2.jpg"]}
       />
       <Footer />
-      <div className="size-12 bg-gray-600 rounded-full flex items-center justify-center">
-        <Image
-          className="rounded-full"
-          src="/profile.png"
-          alt=""
-          width={48}
-          height={48}
-        />
-      </div>
-    </div>
+    </main>
   );
 }

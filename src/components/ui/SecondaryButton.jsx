@@ -1,10 +1,10 @@
 import React from "react";
-import { TvMinimalPlay } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import Link from "next/link";
 
-const Button = ({
+const SecondaryButton = ({
   text,
-  icon: Icon = TvMinimalPlay,
+  icon: Icon = ArrowDown,
   onClick,
   to,
   variant = "bordered",
@@ -27,13 +27,30 @@ const Button = ({
     </>
   );
 
+  const handleScroll = (event, target) => {
+    event.preventDefault();
+    const element = document.querySelector(target);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   if (to) {
-    // Si se proporciona 'to', renderiza un Link de Next.js
-    return (
-      <Link href={to} className={buttonClasses}>
-        {content}
-      </Link>
-    );
+    if (to.startsWith("#")) {
+      // Si 'to' comienza con '#', navega usando el desplazamiento suave
+      return (
+        <button className={buttonClasses} onClick={(e) => handleScroll(e, to)}>
+          {content}
+        </button>
+      );
+    } else {
+      // Si 'to' es una ruta normal, usa Link de Next.js
+      return (
+        <Link href={to} className={buttonClasses}>
+          {content}
+        </Link>
+      );
+    }
   }
 
   // Si no hay 'to', renderiza un botón normal con onClick
@@ -47,4 +64,4 @@ const Button = ({
   );
 };
 
-export default Button;
+export default SecondaryButton;

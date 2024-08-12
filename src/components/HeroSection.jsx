@@ -38,12 +38,7 @@ export default function Hero() {
 
       <div className="flex gap-3">
         <Button text="GET STARTED" />
-        <SecondaryButton
-          text="Watch Notebook Tutorial"
-          onClick={() =>
-            window.open("https://www.youtube.com/watch?v=ArYtaEha6ok", "_blank")
-          }
-        />
+        <SecondaryButton text="Templates" to="#projects" />
       </div>
 
       <footer className="mt-9 py-10">
