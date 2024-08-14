@@ -16,10 +16,10 @@ export default function Post({ params }) {
   const postData = getPostData(params.slug);
 
   return (
-    <div className="max-w-6xl mx-auto min-h-screen">
+    <div className="max-w-6xl px-5 lg:px-0 mx-auto min-h-screen">
       <Navbar />
       <section className="max-w-[45rem] mx-auto pt-20 pb-14 flex flex-col gap-5">
-        <div className="flex gap-4 text-[var(--Text)] text-p16 items-center">
+        <div className="flex flex-col md:flex-row gap-4 text-[var(--Text)] text-p16 md:items-center">
           <SecondaryButton
             className="text-white"
             to={`/blog`}
