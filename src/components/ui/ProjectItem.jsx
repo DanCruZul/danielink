@@ -13,15 +13,17 @@ const ProjectItem = ({
   images,
 }) => {
   return (
-    <div className="grid grid-cols-2 gap-20">
+    <div className="grid lg:grid-cols-2 gap-9 md:gap-20">
       <div>
-        <div className="sticky flex flex-col top-8 gap-9">
+        <div className="sticky flex flex-col top-8 gap-6 lg:gap-9">
           <div className="w-fit bg-[var(--Dark-Elevated)] border border-[var(--Border)] text-white text-sm py-2 px-3 -tracking-wide rounded-full inline-block">
             {year}
           </div>
 
-          <div className="flex flex-col gap-3 pb-11">
-            <h3 className="text-h3 font-medium">{title}</h3>
+          <div className="flex flex-col gap-3 pb-6 lg:pb-11">
+            <h3 className="text-h3s md:text-h3m lg:text-h3 font-medium">
+              {title}
+            </h3>
             <p className="text-p16">{description}</p>
           </div>
 
@@ -61,17 +63,17 @@ const ProjectItem = ({
         </div>
       </div>
 
-      <div className="flex flex-col gap-9">
+      <div className="flex flex-col gap-6 lg:gap-9">
         <div className="w-fit bg-[var(--Dark-Elevated)] border border-[var(--Border)] text-white text-sm py-2 px-3 -tracking-wide rounded-full inline-block">
           {company}
         </div>
-        <div className="flex flex-col gap-9">
+        <div className="flex flex-col gap-6 lg:gap-9">
           {images.map((image, index) => (
             <div key={index} className="rounded-2xl overflow-hidden">
               <Image
                 src={image}
                 alt={`Project ${index + 1}`}
-                className="w-full h-[25rem] object-cover transition duration-300 hover:brightness-90"
+                className="w-full h-[20rem] lg:h-[25rem] object-cover transition duration-300 hover:brightness-90"
                 width={400}
                 height={400}
               />

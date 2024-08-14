@@ -10,14 +10,14 @@ export default async function Blog() {
   const posts = await Promise.all(slugs.map((slug) => getPostData(slug)));
 
   return (
-    <div className="max-w-6xl mx-auto min-h-screen">
+    <div className="max-w-6xl px-5 lg:px-0 mx-auto min-h-screen">
       <Navbar />
-      <section className="flex flex-col py-24 gap-14">
+      <section className="flex flex-col py-14 md:py-20 lg:py-24 gap-14">
         <div className="flex justify-between items-center">
-          <h2 className="text-h2 font-medium flex items-center">
-            Latest from my blog
+          <h2 className="text-3xl md:text-h2 font-medium flex items-center">
+            Blog
           </h2>
-          <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3">
             <div className="size-12 bg-gray-600 rounded-full flex items-center justify-center">
               <Image
                 className="rounded-full"

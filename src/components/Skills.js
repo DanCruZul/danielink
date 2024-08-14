@@ -17,9 +17,9 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-24 grid grid-cols-2 gap-16">
+    <section className="py-14 md:py-20 lg:py-24 grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-16">
       <div className="flex flex-col gap-3">
-        <h2 className="text-h2 font-medium flex items-center">
+        <h2 className="text-h2s lg:text-h2 font-medium flex items-center">
           <span className="size-3 bg-[var(--Accent)] rounded-full mr-5"></span>
           Skills
         </h2>
@@ -33,7 +33,7 @@ const Skills = () => {
       </div>
 
       <div>
-        <div className="flex flex-wrap justify-end gap-2">
+        <div className="flex flex-wrap justify-start lg:justify-end gap-2">
           {skills.map((skill, index) => (
             <span
               key={index}

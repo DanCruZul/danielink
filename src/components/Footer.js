@@ -56,12 +56,14 @@ export default function Footer() {
 
   return (
     <footer>
-      <div>
-        <div className="grid grid-cols-2 py-16 border-y border-[var(--Border)]">
+      <div className="max-lg:text-center">
+        <div className="grid lg:grid-cols-2 py-10 lg:py-16 max-lg:gap-8 border-y border-[var(--Border)]">
           <div>
-            <h2 className="text-5xl font-medium">DANIELINK@GMAIL.COM</h2>
+            <h2 className="text-h2s lg:text-5xl font-medium">
+              DANIELINK@GMAIL.COM
+            </h2>
           </div>
-          <div className="flex flex-wrap justify-evenly">
+          <div className="flex flex-col lg:flex-row flex-wrap justify-evenly max-lg:gap-8">
             <div className="flex flex-col gap-2 text-p16">
               <h3>Useful links</h3>
               <ul className="flex flex-col gap-2 text-[var(--Text)]">
@@ -94,7 +96,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-9 border-b border-[var(--Border)] grid grid-cols-2 items-center">
+        <div className="py-9 border-b border-[var(--Border)] grid lg:grid-cols-2 max-lg:gap-6 items-center">
           <div className="text-3xl -tracking-wider italic">
             <Link href="/home#hero">Danielink</Link>
           </div>
@@ -106,7 +108,7 @@ export default function Footer() {
               Terms & Conditions
             </a>
           </div> */}
-          <div className="flex justify-end gap-2">
+          <div className="flex justify-center lg:justify-end gap-2">
             <a
               href="https://www.youtube.com/@danielink."
               target="_blank"
@@ -134,7 +136,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="py-6 text-p-16 flex justify-between">
+        <div className="py-6 text-p-16 flex flex-col lg:flex-row justify-between max-lg:gap-3">
           <p>© Notebook 2024. All Rights Reserved.</p>
           <p>
             Designed by{" "}

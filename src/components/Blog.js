@@ -31,8 +31,8 @@ const LatestBlogPosts = () => {
   }
 
   return (
-    <div className="flex flex-col py-24 gap-11">
-      <h2 className="text-h2 font-medium flex items-center">
+    <div className="flex flex-col py-14 md:py-20 lg:py-24 gap-11">
+      <h2 className="text-h2s md:text-h2 lg:text-h2 font-medium flex items-center">
         <span className="size-3 bg-[var(--Accent)] rounded-full mr-5"></span>
         Latest from my blog
       </h2>

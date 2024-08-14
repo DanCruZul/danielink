@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 
 export default function Cta() {
   return (
-    <div className="max-w-6xl mx-auto min-h-screen">
+    <div className="max-w-6xl px-5 lg:px-0 mx-auto min-h-screen">
       <Navbar />
       <GetStarted />
       <CTA

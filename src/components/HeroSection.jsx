@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="hero" className="flex flex-col pt-24 gap-9">
+    <section id="hero" className="flex flex-col pt-8 lg:pt-24 gap-5 lg:gap-9">
       <div className="flex items-center gap-3">
         <div className="size-12 bg-gray-600 rounded-full flex items-center justify-center">
           <Image
@@ -26,12 +26,12 @@ export default function Hero() {
         </div>
       </div>
 
-      <h1 className="text-h1 font-medium">
+      <h1 className="text-h1s md:text-h1m lg:text-h1 font-medium">
         Elevate your online presence with our customizable portfolio template
         tailored for freelancers.
       </h1>
 
-      <p className="text-p20 mb-1 max-w-[48rem]">
+      <p className="text-p20s lg:text-p20 mb-3 lg:mb-1 max-w-[48rem]">
         Present your skills, experience, and projects in a visually compelling
         way to captivate potential clients and stand out in your field.
       </p>
@@ -41,7 +41,7 @@ export default function Hero() {
         <SecondaryButton text="Templates" to="#projects" />
       </div>
 
-      <footer className="mt-9 py-10">
+      <footer className="lg:mt-9 lg:py-10">
         {/* <div className="flex gap-20">
           <div className="text-[var(--Border)] text-4xl font-bold">
             logo ipsum

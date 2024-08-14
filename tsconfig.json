@@ -27,7 +27,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/blog/page.js",
-    "src/components/About.js",
+    "src/components/About.tsx",
     "src/app/posts/[slug]/page.js",
     "src/components/ui/ProjectItem.jsx"
   ],

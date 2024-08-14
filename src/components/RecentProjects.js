@@ -63,13 +63,16 @@ const RecentProjects = () => {
   ];
 
   return (
-    <div id="projects" className="flex flex-col gap-16 py-24">
-      <h2 className="text-h2 font-medium flex items-center">
+    <div
+      id="projects"
+      className="flex flex-col gap-8 md:gap-10 py-14 lg:gap-16 md:py-20 lg:py-24"
+    >
+      <h2 className="text-h2s md:text-h2m lg:text-h2 font-medium flex items-center">
         <span className="size-3 bg-[var(--Accent)] rounded-full mr-5"></span>
         Recent projects
       </h2>
 
-      <div ref={projectsRef} className="flex flex-col gap-24">
+      <div ref={projectsRef} className="flex flex-col gap-14 lg:gap-24">
         {projects.map((project, index) => (
           <ProjectItem key={index} {...project} />
         ))}

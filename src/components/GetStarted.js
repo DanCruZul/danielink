@@ -6,17 +6,35 @@ import { InlineWidget } from "react-calendly";
 
 export default function GetStarted() {
   const [isCalendlyReady, setIsCalendlyReady] = useState(false);
+  const [widgetHeight, setWidgetHeight] = useState("42rem");
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.Calendly) {
       setIsCalendlyReady(true);
     }
-  }, [setIsCalendlyReady]);
+
+    const updateWidgetHeight = () => {
+      if (window.innerWidth < 640) {
+        setWidgetHeight("30rem");
+      } else if (window.innerWidth < 1024) {
+        setWidgetHeight("36rem");
+      } else {
+        setWidgetHeight("42rem");
+      }
+    };
+
+    updateWidgetHeight();
+    window.addEventListener("resize", updateWidgetHeight);
+
+    return () => window.removeEventListener("resize", updateWidgetHeight);
+  }, []);
 
   return (
-    <div className="flex flex-col justify-center text-center py-16 gap-10">
-      <div className="flex flex-col gap-3">
-        <h2 className="text-h1 font-medium">Get Started</h2>
+    <div className="flex flex-col justify-center text-center py-16 gap-8 md:gap-11 lg:gap-10">
+      <div className="flex flex-col gap-5 md:gap-6 lg:gap-3">
+        <h2 className="text-h1s md:text-h1m lg:text-h1 font-medium">
+          Get Started
+        </h2>
         <p className="text-p20">
           Find a suitable time slot in my calendar, and let&apos;s discuss your
           project.
@@ -55,18 +73,16 @@ export default function GetStarted() {
         onLoad={() => setIsCalendlyReady(true)}
       />
       {isCalendlyReady && (
-        <div className="mt-10">
+        <div className="mt-10 px-4 sm:px-6 lg:px-8">
           <InlineWidget
             url="https://calendly.com/danielcruzzuluaga"
             styles={{
               backgroundColor: "var(--Dark-Elevated)",
               borderRadius: "1rem",
-              height: "42rem",
+              height: widgetHeight,
               width: "100%",
-              maxWidth: "4xl",
+              maxWidth: "64rem", // 4xl in rem
               margin: "0 auto",
-              paddingLeft: "4rem",
-              paddingRight: "4rem",
             }}
           />
         </div>
