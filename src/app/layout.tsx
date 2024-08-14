@@ -4,7 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Danielink | Portfolio",
+  title: "Daniel Cruz | Portfolio",
   description: "Portfolio of Daniel Cruz",
 };
 
