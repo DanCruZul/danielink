@@ -1,13 +1,29 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import Button from "./ui/PrimaryButton";
 import SecondaryButton from "./ui/SecondaryButton";
 import Image from "next/image";
 
 export default function Hero() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 50); // Reducido a 50ms para iniciar más rápido
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section id="hero" className="flex flex-col pt-8 lg:pt-24 gap-5 lg:gap-9">
-      <div className="flex items-center gap-3">
+    <section
+      id="hero"
+      className="flex flex-col pt-8 lg:pt-24 gap-5 lg:gap-9 overflow-hidden"
+    >
+      <div
+        className={`flex items-center gap-3 transition-all duration-700 ease-out ${
+          isVisible
+            ? "translate-x-0 opacity-100"
+            : "-translate-x-[50px] opacity-0"
+        }`}
+      >
         <div className="size-12 bg-gray-600 rounded-full flex items-center justify-center">
           <Image
             className="rounded-full"
@@ -26,7 +42,13 @@ export default function Hero() {
         </div>
       </div>
 
-      <h1 className="text-h1s md:text-h1m lg:text-h1 font-medium">
+      <h1
+        className={`text-h1s md:text-h1m lg:text-h1 font-medium transition-all duration-700 ease-out delay-200 ${
+          isVisible
+            ? "translate-x-0 opacity-100"
+            : "-translate-x-[50px] opacity-0"
+        }`}
+      >
         Elevate your online presence with our customizable portfolio template
         tailored for freelancers.
       </h1>

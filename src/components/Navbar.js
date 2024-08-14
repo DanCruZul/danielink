@@ -79,7 +79,7 @@ export default function Navbar() {
   return (
     <header className="relative grid grid-cols-2 lg:grid-cols-3 items-center py-4">
       <div className="text-3xl -tracking-wider italic">
-        <Link href="/home#hero">Notebook</Link>
+        <Link href="/home#hero">Danielink</Link>
       </div>
       <nav className="hidden lg:flex justify-center">
         <ul className="flex gap-10 text-base text-[var(--Text)] -tracking-wider duration-300">
